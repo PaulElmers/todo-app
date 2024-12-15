@@ -1,0 +1,231 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Фон і розташування контейнера */
+body {
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Контейнер додатка */
+.container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Форма для додавання/редагування справи */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Загальні стилі для полів вводу */
+input, textarea, select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #8e44ad;
+}
+
+/* Кнопка додавання/редагування */
+button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #6c3483, #1e80b6);
+}
+
+/* Список справ */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+li {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст справи */
+.todo-text {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.todo-priority {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.todo-priority.Low {
+  background-color: #2ecc71;
+}
+
+.todo-priority.Medium {
+  background-color: #f39c12;
+}
+
+.todo-priority.High {
+  background-color: #e74c3c;
+}
+
+/* Кнопки редагування та видалення */
+button.edit-btn {
+  background-color: #8e44ad;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.edit-btn, button.delete-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.edit-btn:hover {
+  background-color: #6c3483;
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+}
+/* Додаткові стилі для проектів */
+input[type="text"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+select:focus {
+  border-color: #8e44ad;
+}
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filters button {
+  padding: 10px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filters button:hover {
+  background: linear-gradient(to right, #6c3483, #1e80b6);
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
